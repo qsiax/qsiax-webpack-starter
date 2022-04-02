@@ -1,18 +1,19 @@
 # Webpack Starter Kit
 
-## Как пользоваться
+## Use
 
 ```
-    npm install
+    npm i
     npm run build
 ```
-или
+or
 
 ```
-   npm install
+   npm i
    npm run start
 ```
+#
 
-
+By qsiax
 
 
