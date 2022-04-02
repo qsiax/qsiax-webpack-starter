@@ -1,5 +1,4 @@
 # Webpack Starter Kit
-# 
 
 ## Как пользоваться
 
