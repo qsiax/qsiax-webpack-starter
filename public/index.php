@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="shortcut icon" href="assets/images/icon-logo.png" type="image/png">
 	<title>ЦОПП</title>
-</head>
+<script defer src="bandle.js"></script><link href="styles.css" rel="stylesheet"></head>
 
 <body>
 
@@ -143,8 +143,15 @@
 						</ul>
 				</div>
 				<div class="header__block">
-					<div class="header__btn-auth">Войти</div>
-					<div class="header__btn-profile"></div>
+					<?php
+					if($_COOKIE['users'] == ''):
+				?>
+				<div class="header__btn-auth">Войти</div>
+				<?php else: ?>
+				<div class="header__btn-profile"></div>
+				<? endif; ?>
+					
+					
 					<div class="header__btn"></div>
 				</div>
 			</div>

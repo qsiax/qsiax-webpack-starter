@@ -1,2 +1,19 @@
-$text: #fff;
-$bg: #333;
+$main-color: #fff;
+$primary-color: #0284C7;
+$secondary-color: #334155;
+$tertiary-color: #64748B;
+$text: #101010;
+$text-secondary: #8C8C8C;;
+$error: #ED0A34;
+$succes: #0284C7;
+$transition: all .5s ease;
+
+@mixin background {
+    background: url(/img/Logo.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@mixin manrope {
+    font-family: 'Manrope', sans-serif;
+}

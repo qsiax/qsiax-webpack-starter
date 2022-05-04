@@ -1,0 +1,174 @@
+.about {
+
+    &__container {
+    }
+
+    &__body {
+        border-bottom: 2px solid $text;
+        margin-bottom: 74px;
+    }
+
+    &__block {
+        display: flex;
+        position: relative;
+        border-top: 2px solid $text;
+        margin-bottom: 101px;
+    }
+
+    &__heading {
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 100%;
+        text-transform: uppercase;
+        max-width: 295px;
+        margin-right: 317px;
+        margin-top: 20px;
+        span:nth-child(2) {
+            font-family: 'Playfair Display';
+            font-style: italic;
+        }
+    }
+
+    &__text {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 19px;
+        color: $text-secondary;
+        max-width: 260px;
+        margin-top: 20px;
+    }
+
+    &__num {
+        position: absolute;
+        right: 0;
+        top: 20px;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 25px;
+        letter-spacing: -0.5px;
+    }
+
+    &__content {
+        display: flex;
+    }
+
+    &__content-block {
+        display: flex;
+        max-width: 320px;
+        &:nth-child(2) {
+            display: flex;
+            flex-direction: column;
+            margin-left: 500px;
+        }
+    }
+
+    &__item {
+        margin-right: 20px;
+        margin-bottom: 30px;
+        &:nth-child(1) {
+            .about__item-image {
+                @include background;
+                background: linear-gradient(0deg, rgba(2, 132, 199, 0.1), rgba(2, 132, 199, 0.1)), url(/img/about-01.jpg);
+                &:hover {
+                    background: url(/img/about-01.jpg);
+                    transform: scale(1.05) translateX(10px);
+                }
+            }
+        }
+        &:nth-child(2) {
+            .about__item-image {
+                @include background;
+                background: linear-gradient(0deg, rgba(2, 132, 199, 0.1), rgba(2, 132, 199, 0.1)), url(/img/about-02.jpg);
+                &:hover {
+                    background: url(/img/about-02.jpg);
+                    transform: scale(1.05) translateX(10px);
+                }
+            }
+ 
+        }
+        &:nth-child(3) {
+            .about__item-image {
+                @include background;
+                background: linear-gradient(0deg, rgba(2, 132, 199, 0.1), rgba(2, 132, 199, 0.1)), url(/img/about-03.jpg);
+                &:hover {
+                    background: url(/img/about-03.jpg);
+                    transform: scale(1.05) translateX(10px);
+                }
+            }
+        }
+    }
+
+    &__item-image {
+        height: 295px;
+        width: 183px;
+        margin-bottom: 10px;
+        transition: $transition;
+    }
+
+    &__item-name {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 25px;
+        max-width: 175px;
+        margin-bottom: 10px;
+    }
+
+    &__item-text {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 19px;
+        color: $text-secondary;
+    }
+
+    &__content-arrow-wrapper {
+        width: 160px;
+        height: 160px;
+        border: 2px solid $text;
+        border-radius: 50%;
+        margin-bottom: 53px;
+        transition: .5s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        &:hover {
+            border: none;
+            background: $primary-color;
+        }
+        &:hover .about__content-arrow-text {
+            opacity: 1;
+        }
+        &:hover .about__content-arrow {
+            transform: translate(200%, -200%);
+        }
+    }
+
+    &__content-arrow {
+        position: absolute;
+        width: 55px;
+        height: 55px;
+        @include background;
+        background: url(/img/arrow.svg);
+        transition: .5s ease;
+    }
+
+    &__content-arrow-text {
+        position: absolute;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 19px;
+        color: $main-color;
+        opacity: 0;
+        transition: .5s ease;
+        cursor: pointer;
+    }
+
+    &__content-block-text {
+        font-weight: 500;
+        font-size: 34px;
+        line-height: 46px;
+        max-width: 325px;
+    }
+}

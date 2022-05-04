@@ -1,0 +1,91 @@
+.banner {
+    background: $primary-color;
+    * {
+        color: $main-color;
+    }
+    &__container {
+    }
+
+    &__body {
+    }
+
+    &__content {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    &__heading {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        overflow: hidden;
+        margin-top: 20px;
+        margin-bottom: 25px;
+        span:nth-child(1) {
+            font-weight: 400;
+            font-size: 64px;
+            line-height: 110.5%;
+            text-transform: uppercase;
+        }
+        span:nth-child(2) {
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 110.5%;
+        }
+    }
+
+    &__decore {
+        position: absolute;
+        &:nth-child(2) {
+            @include background;
+            background: url(/img/banner-decore-01.png);
+            width: 100px;
+            height: 100px;
+            right: 613px;
+            top: 20px;
+        }
+        &:nth-child(3) {
+            @include background;
+            background: url(/img/banner-decore-02.png);
+            width: 100px;
+            height: 100px;
+            right: 410px;
+            top: 20px;
+        }
+        &:nth-child(4) {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 2px solid $text;
+            cursor: pointer;
+            right: 0px;
+            top: 20px;
+            transition: .4s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &:hover {
+                border: 2px solid $main-color;
+                .banner__decore-arrow {
+                    background: url(/img/banner-arrow.svg) center center;
+                }
+            }
+            .banner__decore-arrow {
+                width: 49px;
+                height: 48px;
+                @include background;
+                background: url(/img/banner-arrow-bl.svg) center center;
+                transition: .4s ease;
+            }
+        }
+        &:nth-child(5) {
+            @include background;
+            background: url(/img/banner-decore-04.png);
+            width: 100px;
+            height: 100px;
+            right: 203px;
+            top: 20px;
+        }
+    }
+}
