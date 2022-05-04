@@ -1,0 +1,294 @@
+.auth {
+    position: fixed;
+    display: flex;    
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: rgba(16, 16, 16, 0.35);
+    z-index: 99;
+    transition: .7s ease;
+    transform: translateY(-120%);
+    &.active {
+        transform: translateY(0%);
+    }
+    * {
+        color: $text;
+    }
+    &__body {
+        width: 480px;
+        height: 602px;
+        background: $main-color;
+        border-radius: 30px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__heading {
+        font-weight: 700;
+        font-size: 34px;
+        line-height: 100%;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+        margin-top: 45px;
+    }
+
+    &__login {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 19px;
+        max-width: 340px;
+        margin-bottom: 120px;
+        span {
+            color: $primary-color;
+            cursor: pointer;
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-width: 340px;
+        input {
+            width: 100%;
+            background: none;
+            border: none;
+            border-bottom: 2px solid $text;
+            outline: none;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 25px;
+            @include manrope;
+            font-weight: 500;
+            padding-bottom: 10px;
+            position: relative;
+            &::placeholder {
+                font-size: 1em;
+                @include manrope;
+                color: $text-secondary;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 25px;
+            }
+        }
+        button[type='submit'] {
+            width: 340px;
+            height: 60px;
+            border: none;
+            @include manrope;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 25px;
+            color: #eee;
+            background: $primary-color;
+            margin-bottom: 10px;
+        }
+        a.google {
+            width: 340px;
+            height: 60px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            background: none;
+            border: 2px solid $text;
+            margin-top: 10px;
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            transition: .5s ease;
+            .google-text {
+                position: relative;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 25px;
+                color: $text;
+                @include manrope;
+                z-index: 1;
+                transition: .5s ease;
+            }
+            .google-icon {
+                width: 24px;
+                height: 24px;
+                @include background;
+                background: url(/img/google.svg);
+                margin-right: 10px;
+                z-index: 1;
+            }
+        }
+
+        p {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 25px;
+            color: $text-secondary;
+        }
+    }
+
+    &__form-input-wrapper {
+        display: flex;
+        position: relative;
+        width: 340px;
+        margin-bottom: 20px;
+        &:nth-child(2) {
+            .auth__form-icon {
+                position: absolute;
+                bottom: 10px;
+                right: 5px;
+                width: 16px;
+                height: 21px;
+                @include background;
+                background: url(/img/pass.svg) center center;
+            }
+        }
+    }
+
+    &__form-icon {
+        position: absolute;
+        bottom: 10px;
+        right: 5px;
+        width: 16px;
+        height: 16px;
+        @include background;
+        background: url(/img/login.svg) center center;
+    }
+
+    &__close {
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        top: 40px;
+        right: 40px;
+        cursor: pointer;
+        &:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            background: $text;
+            transform: rotate(45deg);
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            background: $text;
+            transform: rotate(-45deg);
+        }
+    }
+}
+
+
+
+.check {
+    position: fixed;
+    display: flex;    
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0, .8);
+    z-index: 99;
+    transition: .7s ease;
+    transform: translateY(99.9%);
+    &.active {
+        transform: translateY(0%);
+    }
+    * {
+        color: $main-color;
+    }
+    &__body {
+        width: 500px;
+        height: 500px;
+        background: $secondary-color;
+        padding: 0px 30px;
+        position: relative;
+    }
+
+    &__close {
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        top: 40px;
+        right: 20px;
+        cursor: pointer;
+        &:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            background: $main-color;
+            transform: rotate(45deg);
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            background: $main-color;
+            transform: rotate(-45deg);
+        }
+    }
+
+    &__heading {
+        margin-top: 60px;
+        font-size: 1.8em;
+        margin-bottom: 10px;
+    }
+
+    &__login {
+        font-size: 1em;
+        margin-bottom: 30px;
+        span {
+            color: $primary-color;
+            margin-left: 5px;
+            cursor: pointer;
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        max-width: 300px;
+        input {
+            background: none;
+            border: none;
+            border-bottom: 1px solid $main-color;
+            margin-bottom: 20px;
+            outline: none;
+            font-size: 1em;
+            @include manrope;
+            font-weight: 500;
+            &::placeholder {
+                font-size: 1em;
+                @include manrope;
+                color: rgba(255, 255, 255, .4);
+            }
+            &:last-child {
+                margin-bottom: 40px;
+            }
+        }
+        button {
+            max-width: 200px;
+            margin-left: 100px;
+            height: 40px;
+            border: none;
+            color: #000;
+            font-size: 1em;
+            font-weight: 600;
+            @include manrope;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+    }
+}

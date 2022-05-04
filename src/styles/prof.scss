@@ -1,0 +1,129 @@
+.prof {
+
+    &__container {
+    }
+
+    &__body {
+        margin-top: 200px;
+    }
+
+    &__block {
+        display: flex;
+        border-top: 2px solid $text;
+        position: relative;   
+        overflow: hidden;
+        margin-bottom: 150px;
+    }
+
+    &__heading {
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 100%;
+        text-transform: uppercase;
+        margin-top: 20px;
+        margin-right: 146px;
+    }
+
+    &__text {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 19px;
+        color: $text-secondary;
+        max-width: 175px;
+        margin-top: 20px;
+    }
+
+    &__num {
+        position: absolute;
+        right: 0;
+        top: 20px;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 25px;
+        letter-spacing: -0.5px;
+    }
+
+    &__content-wrapper {
+        display: flex;
+        margin-bottom: 100px;
+    }
+
+    &__image {
+        width: 407px;
+        height: 484px;
+        @include background;
+        background: url(/img/prof-image.jpg);
+        margin-right: 202px;
+    }
+
+    &__content {
+        display: flex;
+    }
+
+    &__content-block {
+        position: relative;
+        &:nth-child(2) {
+            display: flex;
+            align-items: flex-end;
+        }
+    }
+
+    &__content-block-heading {
+        font-weight: 500;
+        font-size: 34px;
+        line-height: 46px;
+        max-width: 407px;
+    }
+
+    &__content-block-text {
+        font-weight: 700;
+        font-size: 34px;
+        line-height: 46px;
+        max-width: 215px;
+        position: absolute;
+        bottom: 0;
+    }
+
+    &__arrow-wrapper {
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        border: 2px solid $text;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: .5s ease;
+        overflow: hidden;
+        &:hover {
+            background: $primary-color;
+            border: none;
+            .prof__arrow {
+                transform: translate(200%, -200%);
+            }
+            .prof__arrow-text {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__arrow {
+        width: 56px;
+        height: 55px;
+        @include background;
+        background: url(/img/prof-arrow.png);
+        transition: .5s ease;
+    }
+
+    &__arrow-text {
+        position: absolute;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 19px;
+        color: $main-color;
+        opacity: 0;
+        transition: .5s ease;
+        cursor: pointer;
+    }
+}
+

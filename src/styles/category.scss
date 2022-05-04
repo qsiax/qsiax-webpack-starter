@@ -1,0 +1,259 @@
+.category {
+
+    &__container {
+        overflow: visible;
+    }
+
+    &__body {
+        margin-top: 200px;
+    }
+
+    &__block {
+        display: flex;
+        overflow: hidden;
+        border-top: 1px solid $text;
+        margin-bottom: 100px;
+    }
+
+    &__heading {
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 100%;
+        color: $text;
+        text-transform: uppercase;
+        max-width: 360px;
+        margin-right: 244px;
+        margin-top: 20px;
+        span:nth-child(2) {
+            font-family: 'Playfair Display';
+            font-style: italic;
+        }
+    }
+
+    &__text {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 19px;
+        color: #000;
+        max-width: 281px;
+        margin-right: 296px;
+        margin-top: 20px;
+    }
+
+    &__num {
+        margin-top: 20px;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 25px;
+        letter-spacing: -0.5px;
+        color: $text;
+    }
+
+    &__content-wrapper {
+        display: flex;
+    }
+
+    &__content {
+        position: relative;
+        &:first-child {
+            border: 2px solid $text;
+            
+        }
+        input {
+            border: none;
+            outline: none;
+            background: none;
+            border-bottom: 2px solid $text;
+            margin-left: 20px;
+            margin-bottom: 10px;
+            margin-right: 40px;
+            width: 347px;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 19px;
+            color: $text;
+            @include manrope;
+            &::placeholder {
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 19px;
+                color: $text;
+                @include manrope;
+            }
+        }
+
+        button {
+            border: none;
+            background: none;
+            outline: none;
+            height: 24px;
+            width: 24px;
+            border-radius: 50%;
+            border: 1px solid $text;
+            cursor: pointer;
+            position: absolute;
+            right: 45px;
+            bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    &__content-form {
+        display: flex;
+        position: relative;
+    }
+
+    // &__form-arrow {
+    //     position: absolute;
+    //     width: 20px;
+    //     height: 20px;
+    //     @include background;
+    //     background: url(/img/category-arrow-small.png);
+    //     background-size: cover;
+    // }
+
+    &__content-heading {
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 100%;
+        color: $text;
+        text-transform: uppercase;
+        max-width: 291px;
+        margin-bottom: 57px;
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+
+    &__content-descriptions {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 16px;
+        color: $text-secondary;
+        margin-left: 20px;
+        margin-bottom: 60px;
+    }
+
+    &__content-pattern {
+        width: 227px;
+        height: 228px;
+        @include background;
+        background: url(/img/category-pattern.png);
+        margin-left: 73px;
+        position: absolute;
+        bottom: 0;
+    }
+
+    &__item-wrapper {
+        display: flex;
+        &:first-child {
+            
+            .category__item:first-child {
+                .category__item-text {
+                    margin-top: 10px;
+                }
+                .category__item-btn {
+                    margin-top: 38px;
+                }
+            }
+        }
+
+        &:nth-child(2) {
+            .category__item {
+                border-bottom: 2px solid $text;
+                &:last-child {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+
+    &__item {
+        border-right: 2px solid $text;
+        border-top: 2px solid $text;
+        width: 197px;
+        transition: $transition;
+        cursor: pointer;
+        z-index: 1;
+        &:hover {
+            background: $primary-color;
+            transform: scale(1.1) translateX(8px) translateY(-11px);
+            border: none;
+            * {
+                color: #EEEEEE;
+            }
+            .category__item-btn {
+                border: 2px solid #EEEEEE;
+            }
+        }
+    }
+
+    &__item-heading {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 25px;
+        color: $text;
+        max-width: 171px;
+        margin-top: 15px;
+        margin-left: 15px;
+    }
+
+    &__item-text {
+        max-width: 115px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 19px;
+        color: $text-secondary;
+        margin-left: 15px;
+        margin-top: 35px;
+    }
+
+    &__item-btn {
+        margin-left: 105px;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 19px;
+        color: $text;
+        padding: 5px 9.14px;
+        border: 2px solid $text;
+        border-radius: 15px;
+        margin-right: 12px;
+        margin-bottom: 13px;
+        margin-top: 58px;
+    }
+
+    &__item-arrow-wrapper {
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        border: 2px solid $text;
+        transition: $transition;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        position: relative;
+        &:hover {
+            border: none;
+            border: 2px solid $main-color;
+        }
+        &:hover .category__item-arrow-text {
+            opacity: 1;
+        }
+        &:hover .category__item-arrow {
+            transform: translate(200%, -200%);
+        }
+    }
+
+    &__item-arrow {
+        position: absolute;
+        width: 55px;
+        height: 55px;
+        @include background;
+        background: url(/img/arrow.svg);
+        transition: .5s ease;
+    }
+}
